@@ -41,8 +41,8 @@ def pytorch2onnx(config_path,
     output_names = ['boxes']
     if model.with_bbox:
         output_names.append('labels')
-    if model.with_mask:
-        output_names.append('masks')
+    #if model.with_mask:
+    #    output_names.append('masks')
 
     torch.onnx.export(
         model,
